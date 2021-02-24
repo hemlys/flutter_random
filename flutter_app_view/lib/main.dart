@@ -35,8 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController _textEditingController;
   TextEditingController _textRowEditingController;
 
-  // FocusNode _focus = new FocusNode();
-
   @override
   void initState() {
     _textEditingController = TextEditingController();
@@ -57,17 +55,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   body: Container(
-    //     child: ListView.builder(
-    //       itemCount: _viewList.length,
-    //       scrollDirection: Axis.horizontal,
-    //       itemBuilder: (context, index) {
-    //         return _viewList[index];
-    //       },
-    //     ),
-    //   ),
-    // );
     return Scaffold(
       body: Container(
           child: Column(

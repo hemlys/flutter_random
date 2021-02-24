@@ -14,7 +14,6 @@ class random extends StatefulWidget {
 }
 
 class _randomState extends State<random> {
-  List<Widget> _viewList = <Widget>[];
   var _width;
   var _height;
   int x;
@@ -28,19 +27,7 @@ class _randomState extends State<random> {
 
     print(widget.column);
     print(widget.row);
-    // print(MediaQuery.of(context).size.width);
     randomTime();
-  }
-
-  void _initGuideData() {
-    for (int i = 0; i < 5; i++) {
-      _viewList.add(Container(
-        width: _width / 5,
-        margin: const EdgeInsets.symmetric(horizontal: 1.0),
-        color: Colors.tealAccent,
-        child: Text('$i'),
-      ));
-    }
   }
 
   randomTime() {
@@ -84,16 +71,8 @@ class _randomState extends State<random> {
 
   @override
   Widget build(BuildContext context) {
-    // updateUI();
-    // print(MediaQuery.of(context).size.width);
     _width = MediaQuery.of(context).size.width;
     _height = MediaQuery.of(context).size.height;
-
-    // return Scaffold(
-    //   body: Container(
-    //     child: Text('1235555555'),
-    //   ),
-    // );
 
     return Scaffold(
       body: Container(
@@ -179,17 +158,5 @@ class _randomState extends State<random> {
         ),
       ),
     );
-
-    // return Scaffold(
-    //   body: Container(
-    //     child: GridView(
-    //         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    //             crossAxisCount: 5,
-    //             childAspectRatio: 1.5
-    //         ),
-    //         children: demoChildren(32)
-    //     ),
-    //   ),
-    // );
   }
 }
